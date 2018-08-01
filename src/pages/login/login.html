@@ -1,25 +1,43 @@
-<ion-header no-border>
-  <ion-navbar transparent>
-  </ion-navbar>
-</ion-header>
-
-
 <ion-content>
   <ion-slides pager="false" autoplay="2000" loop="true" speed="1500" effect="fade">
     <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds" [ngStyle]="{'background-image': 'url(' + background +')'}">
     </ion-slide>
   </ion-slides>
+
   <div class="login-container">
-    <img class="logo" src="assets/imgs/logo/logo.png" />
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-      <ion-item>
-        <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
-      </ion-item>
-      <button ion-button margin color="danger">LOGIN</button>
-      <p (click)="openResetPassword()"><strong>Forgot your password?</strong></p>
-    </form>
+    
+    <div class="login-content">
+        <div class="loginLogo"> 
+            <ion-col col-12>
+                <img class="logo" src="assets/imgs/logo/logo.png" />
+            </ion-col>
+          </div>
+        <ion-grid>
+            <ion-row>
+              <ion-col col-12>
+                  <form [formGroup]="loginForm" (ngSubmit)="login()">
+                      <ion-item>
+                        <ion-label> <ion-icon name="md-contact" color="white"></ion-icon></ion-label>
+                        <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label> <ion-icon name="md-lock" color="white"></ion-icon></ion-label>
+                        <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+                      </ion-item>
+                      <button ion-button block color="danger">LOGIN</button>
+                    
+                    </form>
+                  </ion-col>
+            </ion-row>
+            <ion-row no-padding>
+              <ion-col col-5>
+                  <p (click)="openResetPassword()"><strong>Sign Up</strong></p>
+              </ion-col>
+              <ion-col col-7>
+                  <p (click)="openResetPassword()"><strong>Forgot your password?</strong></p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </div>
   </div>
 </ion-content>

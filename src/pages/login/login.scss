@@ -1,16 +1,45 @@
 page-login {
+    $transparent-white: rgba(255, 255, 255, .6);
+    // This is just to make the header transparent and button/icon with white color
+    .toolbar-content,
+    span {
+      color: white;
+    }
+    .toolbar-background,
+    ion-navbar,
+    ion-header {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .header-md::after,
+    .toolbar-background-ios {
+      background-image: none;
+      border-bottom: 0;
+    }
+    //
+
+    // Content
     .scroll-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
         margin-top: 0 !important;
     }
     .logo {
-        width: 70%;
+        width: 100%;
         height: auto;
         padding-top: 9vh;
-        margin-bottom: 15vh;
     }
+
     span {
         color: white;
     }
+
+    ion-icon {
+        display: inline-block;
+        font-size: 1.7em;
+    }
+
     .slide-background {
         background-size: cover;
         background-position: center;
@@ -18,7 +47,7 @@ page-login {
         border-color: transparent;
     }
     .slide-zoom {
-        background: rgba(32, 32, 32, 0.2) !important;
+        background: rgba(0, 0, 0, 0.3) !important;
         height: 100%;
     }
     ion-slides {
@@ -43,8 +72,38 @@ page-login {
         width: 100%;
         margin: 0 auto;
         z-index: 2;
+        display: table;
+        height: 100%;
+        .login-content {
+        display: table-cell;
+        vertical-align: middle;
+        }
     }
     ion-button {
         opacity: 0.8;
     }
+   
+
+  // Input items
+  ion-item {
+    border-radius: 3px !important;
+    padding-left: 10px !important;
+    margin-bottom: 15px !important;
+    margin-bottom: 10px;
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, .2) !important;
+    font-size: 0.9em;
+  }
+   ::-webkit-input-placeholder {
+    color: white !important;
+  }
+  .item-inner {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+  // --
+  .login-button {
+    text-transform: none;
+    border-radius: 3px !important;
+  }
 }

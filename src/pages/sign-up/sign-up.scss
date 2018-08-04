@@ -1,0 +1,28 @@
+page-sign-up {
+    $transparent-white: rgba(255, 255, 255, .6);
+    // This is just to make the header transparent and button/icon with white color
+    .toolbar-content,
+    span {
+      color: white;
+    }
+    .toolbar-background,
+    ion-navbar,
+    ion-header {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .header-md::after,
+    .toolbar-background-ios {
+      background-image: none;
+      border-bottom: 0;
+    }
+    .content{
+        background-color: rgba(0,0,0,0.8);
+        background-image: url('../../assets/imgs/background/signUp.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-color: transparent;
+        filter:brightness(0.4);
+    }
+}

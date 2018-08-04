@@ -47,4 +47,8 @@ export class LoginPage {
       .catch(error => console.log(error));  
   }
 
+  signUp() {
+    this.navCtrl.push('SignUpPage');
+  }
+
 }

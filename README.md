@@ -1,2 +1,2 @@
 # classApp
-App for take a course with different characteristic. 
+App to take a course with different characteristic. 
